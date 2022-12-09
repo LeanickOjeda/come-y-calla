@@ -1,0 +1,7 @@
+{
+  "name": "LosBocaSeca2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

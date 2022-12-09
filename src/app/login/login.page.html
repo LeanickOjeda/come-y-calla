@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="danger" [fullscreen]="true">
+<br>
+  <section>
+    <ion-img class="logo" src="/assets/icon/duff.png"></ion-img>
+  </section>
+<br>
+
+  <ion-item color="danger">
+    <ion-label floating>
+      <ion-icon class="icon" name="person-circle-outline"></ion-icon>
+    </ion-label>
+    <ion-input class="input" type="text" [(ngModel)]="login.Usuario" placeholder="Username"></ion-input>
+  </ion-item>
+<br>
+  <ion-item color="danger">
+    <ion-label floating>
+      <ion-icon class="icon" name="bag-outline"></ion-icon>
+    </ion-label>
+    <ion-input class="input" type="password" [(ngModel)]="login.Password" placeholder="Password"></ion-input>
+  </ion-item>
+<br>
+<br>
+<section>
+  <ion-button shape="block" color="success" class="boton"  (click)="ingresar()">Iniciar Session</ion-button>
+</section>
+<br>
+
+<!-- Registro -->
+
+<section>
+  <ion-button shape="block" color="primary" class="boton" (click)="registrar()" >Registro</ion-button>
+</section>
+
+<ion-modal #modal trigger="open-modal" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content color="danger">
+      <section>
+        <ion-img class="logo" src="/assets/icon/duff.png"></ion-img>
+      </section>
+      <br>
+      <ion-item color="danger">
+        <ion-label floating>
+          <ion-icon class="icon" name="person-circle-outline"></ion-icon>
+        </ion-label>
+        <ion-input class="input" type="text" placeholder="Username"></ion-input>
+      </ion-item>
+    <br>
+      <ion-item color="danger">
+        <ion-label floating>
+          <ion-icon class="icon" name="bag-outline"></ion-icon>
+        </ion-label>
+        <ion-input class="input" type="password" placeholder="Password"></ion-input>
+      </ion-item>
+    <br>
+      <ion-item color="danger">
+        <ion-label floating>
+          <ion-icon class="icon" name="bag-outline"></ion-icon>
+        </ion-label>
+        <ion-input class="input" type="password" placeholder="Confirm Password"></ion-input>
+      </ion-item>
+    <br>
+      <section>
+        <ion-button class="boton" color="primary" (click)="modal.dismiss()">Registrar</ion-button>
+      </section>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+</ion-content>

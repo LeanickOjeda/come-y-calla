@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="danger" [fullscreen]="true">
+  <br>
+  <section>
+    <ion-img class="logo" src="/assets/icon/duff.png"></ion-img>
+  </section>
+  <br>
+  <ion-item color="danger">
+    <ion-label floating>
+      <ion-icon class="icon" name="person-circle-outline"></ion-icon>
+    </ion-label>
+    <ion-input class="input" type="text" placeholder="Username"></ion-input>
+  </ion-item>
+<br>
+  <ion-item color="danger">
+    <ion-label floating>
+      <ion-icon class="icon" name="bag-outline"></ion-icon>
+    </ion-label>
+    <ion-input class="input" type="password" placeholder="Password"></ion-input>
+  </ion-item>
+<br>
+  <ion-item color="danger">
+    <ion-label floating>
+      <ion-icon class="icon" name="bag-outline"></ion-icon>
+    </ion-label>
+    <ion-input class="input" type="password" placeholder="Confirm Password"></ion-input>
+  </ion-item>
+<br>
+  <section>
+    <ion-button class="boton" color="primary" [routerLink]="['/login']">Registrar</ion-button>
+  </section>
+<br>
+  <section>
+    <ion-button class="boton" color="dark" [routerLink]="['/login']">Volver</ion-button>
+  </section>
+</ion-content>

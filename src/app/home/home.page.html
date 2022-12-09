@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+      <ion-buttons slot="start">
+          <ion-button (click)="onclick()">
+              <ion-icon slot="start" name="menu"></ion-icon>
+              Menu
+          </ion-button>
+      </ion-buttons>
+
+      <ion-title>
+          Los boca Seca
+      </ion-title>
+      <ion-buttons slot="primary">
+        <ion-button (click)="logout()" color="danger" fill="outline">
+          Salir
+          <ion-icon slot="end" name="log-out-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment value="inicial" (ionChange)="segmentChanged($event)">
+      <ion-segment-button  value="inicial">
+        <ion-icon name="home"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="perfil">
+        <ion-icon name="briefcase-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="configuracion">
+        <ion-icon name="school-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-router-outlet></ion-router-outlet>
+</ion-content>
